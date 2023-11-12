@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import useTodo from "../context/TodoContext";
 
 function TodoItem({ todo }) {
 const {updateTodo, toggleComplete, deleteTodo} = useTodo()
@@ -41,7 +41,7 @@ function toggle(){
               onClick={() => {
                   if (todo.completed) return;
 
-                  if (isTodoEditable) {
+                  if (isEdit) {
                       editTodo();
                   } else setIsEdit((prev) => !prev);
               }}
