@@ -8,7 +8,7 @@ function TodoItem({ todo }) {
 
   function editTodo() {
     updateTodo(todo.id, { ...todo, todo: todoMsg });
-    setIsEdit(false);
+    setIsEdit(true);
   }
 
   function toggle() {
