@@ -13,7 +13,7 @@ const TodoForm = () => {
   }
 
   return (
-    <form onClick={add} className="flex">
+    <form onSubmit={add} className="flex">
       <input
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
